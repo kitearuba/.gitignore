@@ -23,8 +23,8 @@ You can either:
    and paste them into your project's `.gitignore`.
 
 2. Or download the file (named `gitignore`), then **rename it** in your project root:
-```bash
-mv gitignore .gitignore
+
+   mv gitignore .gitignore
 
 ---
 
