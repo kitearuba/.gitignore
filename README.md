@@ -15,6 +15,19 @@ A robust `.gitignore` tailored for C development, including support for:
 
 ---
 
+## 📥 How to Use
+
+You can either:
+
+1. **Copy the contents** of the `gitignore` file from this repo
+   and paste them into your project's `.gitignore`.
+
+2. Or download the file (named `gitignore`), then **rename it** in your project root:
+```bash
+mv gitignore .gitignore
+
+---
+
 ## 💡 Why This Exists
 
 When collaborating on C projects or pushing to GitHub, your repo can easily get polluted by:
