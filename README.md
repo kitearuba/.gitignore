@@ -145,3 +145,10 @@ git commit -m "Cleaned repo with updated .gitignore ✨"
 ```
 ~ No `.swp` left behind. No `.idea` folder in sight. ~
 ```
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+Feel free to use, modify, and share!
