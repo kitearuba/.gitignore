@@ -1,3 +1,4 @@
+
 # 🚫 .gitignore for C Devs (Vim + CLion + VS + 42 Style)
 
 ![Git](https://img.shields.io/badge/Git-clean-blue?style=flat-square)
@@ -23,10 +24,8 @@ You can either:
    and paste them into your project's `.gitignore`.
 
 2. Or download the file (named `gitignore`), then **rename it** in your project root:
-
    ```bash
    mv gitignore .gitignore
-````
 
 ---
 
@@ -151,6 +150,8 @@ Here’s how to fix it:
 
 > 🔐 This only removes the files from the Git history — they won’t be deleted from your computer.
 
+---
+
 ### 🧪 Double Check
 
 Make sure your `.gitignore` includes all the patterns you want to ignore going forward.
@@ -160,6 +161,8 @@ To see what Git will ignore:
 ```bash
 git status --ignored
 ```
+
+---
 
 ### 💬 Pro Tip
 
@@ -208,3 +211,5 @@ git commit -m "Cleaned repo with updated .gitignore ✨"
 This project is licensed under the [MIT License](LICENSE).
 
 Feel free to use, modify, and share!
+
+```
