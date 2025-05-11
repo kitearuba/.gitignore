@@ -194,7 +194,7 @@ git commit -m "Cleaned repo with updated .gitignore ✨"
 
 * **Christian (chrrodri)**
   GitHub: [@kitearuba](https://github.com/kitearuba)
-  Personal Site: [is.crod.io](https://is.crod.io)
+  Personal Site: [crod.io](https://crod.io)
 
 ---
 
