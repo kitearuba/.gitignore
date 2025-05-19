@@ -1,70 +1,60 @@
-# Prerequisites
-*.d
+# ========================================
+# 42 PROJECTS — COMMON BUILD IGNORE RULES
+# ========================================
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Object and dependency files
+*.o                  # Compiled object files
+*.d                  # Dependency files from -MMD flag
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
+# Static and shared libraries
+*.a                  # Static libraries (e.g., libft.a)
+*.so                 # Shared objects
+*.so.*
 *.la
 *.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
+# Linker and binary output
+*.elf
 *.out
-*.app
-*.i*86
-*.x86_64
 *.hex
+*.map
+*.exp
+*.app
+*.exe
+*.x86_64
+*.i*86
 
-# Debug files
+# Precompiled headers
+*.gch
+*.pch
+
+# Debug and profiling artifacts
 *.dSYM/
-*.su
-*.idb
 *.pdb
+*.idb
+*.su
+*.ilk
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# History (optional, if you log shell history)
+.history
 
-# Vim temporary files
+# ========================================
+# EDITORS AND DEVELOPMENT ENVIRONMENTS
+# ========================================
+
+# Vim
 *.swp
 *.swo
 *.swn
 
-# CLion / IntelliJ IDEA / JetBrains IDEs
-.idea/
-
 # VS Code
 .vscode/
 
+# CLion / JetBrains
+.idea/
+
 # Visual Studio
 *.user
-*.userosscache
 *.suo
 *.sln.docstates
 *.VC.db
@@ -72,7 +62,10 @@ dkms.conf
 *.opensdf
 *.sdf
 *.cache
-*.pdb
+
+# ========================================
+# SYSTEM AND BACKUP FILES
+# ========================================
 
 # macOS metadata
 .DS_Store
@@ -81,5 +74,13 @@ dkms.conf
 *~
 *.bak
 
-# Misc
-*.log
+# ========================================
+# OPTIONAL — Kernel Module Build Output
+# ========================================
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
