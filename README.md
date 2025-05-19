@@ -1,18 +1,24 @@
-
-# 🚫 .gitignore for C Devs (Vim + CLion + VS + 42 Style)
+# 🚫 .gitignore for 42 C Projects (Philo, Pipex, Minishell, FDF, etc.)
 
 ![Git](https://img.shields.io/badge/Git-clean-blue?style=flat-square)
-![C Projects](https://img.shields.io/badge/Language-C-green?style=flat-square)
+![42 Projects](https://img.shields.io/badge/42-Core_Projects-blue?style=flat-square)
 ![Editor Agnostic](https://img.shields.io/badge/Editors-Vim%20%7C%20CLion%20%7C%20VSCode-yellow?style=flat-square)
 ![No Junk](https://img.shields.io/badge/Junk-Free-critical?style=flat-square)
 
-A robust `.gitignore` tailored for C development, including support for:
-- 🧠 42 School projects  
-- 🛠️ JetBrains IDEs (`.idea/`)  
-- 🌀 Vim swap files  
-- 🧱 Visual Studio clutter  
-- 💾 OS & system trash  
-- 🎨 And even `minilibx` smart exceptions!
+A robust and battle-tested `.gitignore` tailored specifically for **42 School C projects**.  
+It helps you keep your repository clean and professional when working on:
+
+- ✅ Philo  
+- ✅ Pipex  
+- ✅ Minishell  
+- ✅ FDF  
+- And other common C-based core projects
+
+It also supports multiple development environments:
+- 🧠 42 Norm compliance
+- 🛠️ CLion, IntelliJ, VS Code
+- 🌀 Vim and terminal-only workflows
+- 💾 System junk and backup file cleanup
 
 ---
 
@@ -20,30 +26,49 @@ A robust `.gitignore` tailored for C development, including support for:
 
 You can either:
 
-1. **Copy the contents** of the `gitignore` file from this repo  
-   and paste them into your project's `.gitignore`.
+1. **Copy the contents** of this `.gitignore` and paste it into your project's root.
 
-2. Or download the file (named `gitignore`), then **rename it** in your project root:
-   ```bash
-   mv gitignore .gitignore
+2. Or download it and rename:
+
+```bash
+curl -O https://raw.githubusercontent.com/kitearuba/c-clean-gitignore/main/.gitignore
+````
 
 ---
 
 ## 💡 Why This Exists
 
-When collaborating on C projects or pushing to GitHub, your repo can easily get polluted by:
+When working in C projects (especially 42), Git repos can get cluttered with:
 
-* Editor settings
-* Swap files
+* Editor and IDE files
+* Backup files
 * Compiled binaries
-* IDE-generated junk
-* Local-only dependencies
+* Temporary files
+* Local-only data
 
-This `.gitignore` keeps your repository **lean**, **clean**, and **collaborator-friendly**. It follows good practice for team dev and includes smart logic to **ignore `minilibx-linux/` but allow key source files**.
+This `.gitignore` helps you:
+
+* Keep your commits clean
+* Focus on your code
+* Collaborate without conflicts
+* Pass evaluations with no junk or noise
 
 ---
 
 ## 🔥 What's Covered
+
+### 🧠 Core Project Binaries (ignored)
+
+```bash
+philo
+pipex
+minishell
+fdf
+```
+
+These are compiled with your `Makefile`, not committed.
+
+---
 
 ### 🗂️ General Dev Files
 
@@ -51,11 +76,13 @@ This `.gitignore` keeps your repository **lean**, **clean**, and **collaborator-
 *.o       # Object files
 *.a       # Static libs
 *.so      # Shared libs
-*.exe     # Executables
+*.d       # Dependency files (from -MMD)
 *.out     # Executables
 *.elf     # Embedded binaries
 *.dSYM/   # macOS debug files
 ```
+
+---
 
 ### ✏️ Editor + IDE Trash
 
@@ -75,20 +102,24 @@ This `.gitignore` keeps your repository **lean**, **clean**, and **collaborator-
 *.opensdf
 *.sdf
 
-# VS Code (optional, safe to include)
+# VS Code
 .vscode/
 ```
+
+---
 
 ### 🧼 OS and Backup Files
 
 ```bash
-.DS_Store   # macOS
-*~          # Backups
+.DS_Store   # macOS metadata
+*~          # Temp/backup files
 *.bak       # Manual backups
 *.log       # Debug logs
 ```
 
-### 🧪 Kernel Module Clutter
+---
+
+### 🧪 Kernel Module Clutter (optional)
 
 ```bash
 *.mod*
@@ -96,6 +127,8 @@ This `.gitignore` keeps your repository **lean**, **clean**, and **collaborator-
 .tmp_versions/
 Module.symvers
 ```
+
+---
 
 ### 📦 `minilibx-linux` Smart Ignore
 
@@ -106,57 +139,39 @@ minilibx-linux/*
 !minilibx-linux/Makefile
 ```
 
-> This keeps the source clean and shareable while ignoring local builds, `.o` files, or system-specific junk.
-
----
-
-## 🛠️ Usage
-
-Copy this `.gitignore` into the root of your C project:
-
-```bash
-curl -O https://raw.githubusercontent.com/kitearuba/c-clean-gitignore/main/.gitignore
-```
-
-Or clone the whole repo and pick what you need.
+> This lets you include source files from `minilibx`, but not system-generated junk.
 
 ---
 
 ## 🧹 Already Tracking Files You Want to Ignore?
 
-If you added files like `.idea/`, `.vscode/`, `*.o`, or other junk **before** using this `.gitignore`, Git will keep tracking them unless you manually stop it.
-
-Here’s how to fix it:
+If Git is already tracking files like `.idea/`, `.vscode/`, `*.o`, or other clutter, you’ll need to untrack them manually.
 
 ### 👉 Step-by-step Cleanup
 
-1. **Remove tracked files (but keep them locally):**
+1. **Untrack files (but keep them locally):**
 
-   ```bash
-   git rm --cached -r .idea .vscode *.o *.log
-   ```
+```bash
+git rm --cached -r .idea .vscode *.o *.log
+```
 
 2. **Commit the cleanup:**
 
-   ```bash
-   git commit -m "Removed unwanted files from tracking 📦"
-   ```
+```bash
+git commit -m "Cleaned up tracked junk files 📦"
+```
 
 3. **Push your changes:**
 
-   ```bash
-   git push
-   ```
-
-> 🔐 This only removes the files from the Git history — they won’t be deleted from your computer.
+```bash
+git push
+```
 
 ---
 
 ### 🧪 Double Check
 
-Make sure your `.gitignore` includes all the patterns you want to ignore going forward.
-
-To see what Git will ignore:
+To verify what's being ignored:
 
 ```bash
 git status --ignored
@@ -166,7 +181,7 @@ git status --ignored
 
 ### 💬 Pro Tip
 
-If you want to be extra safe, you can **stash your changes first**:
+If you want to be extra safe, stash your work first:
 
 ```bash
 git stash
@@ -180,36 +195,33 @@ git stash pop
 
 ## 🧙 Bonus Tip
 
-To apply your new `.gitignore` to already-tracked junk:
+To force apply your `.gitignore` to already tracked junk:
 
 ```bash
 git rm -r --cached .idea minilibx-linux
 git add .
-git commit -m "Cleaned repo with updated .gitignore ✨"
+git commit -m "Applied .gitignore to clean repo ✨"
 ```
 
 ---
 
 ## 👨‍💻 Maintainer
 
-* **Christian (chrrodri)**
-  GitHub: [@kitearuba](https://github.com/kitearuba)
-  Personal Site: [crod.io](https://crod.io)
+**Christian Rodríguez (chrrodri)**
+GitHub: [@kitearuba](https://github.com/kitearuba)
+Personal Site: [crod.io](https://crod.io)
 
 ---
 
 ## 🛡️ Keep It Clean. Push With Pride.
 
 ```
-~ No `.swp` left behind. No `.idea` folder in sight. ~
+~ No .swp left behind. No .idea folder in sight. ~
 ```
 
 ---
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE).
-
-Feel free to use, modify, and share!
-
-```
+Licensed under the [MIT License](LICENSE).
+Free to use, improve, and share.
